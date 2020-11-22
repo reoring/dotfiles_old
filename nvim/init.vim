@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'fatih/vim-go'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --forezn-lockfile'}
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -92,3 +93,11 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
+
+" NERDTree
+"
+nnoremap <silent> <C-k><C-B> :NERDTreeToggle<CR>
+augroup nerdtree_open
+    autocmd!
+    autocmd VimEnter * NERDTree | wincmd p
+augroup END
