@@ -10,3 +10,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ```
 ln -s ~/dotfiles/nvim ~/.config/nvim
 ```
+
+## CheatSheet
+
+Toggle tree: C-k C-b
